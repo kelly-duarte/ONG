@@ -25,9 +25,17 @@ https://projetointegradorunivesp.alwaysdata.net/index.php
 
 ## 🚀 Tecnologias
 
-- **PHP**  
-- **HTML + CSS**  
-- **MySQL** (conexão com banco de dados)  
+*Front End*
+- HTML5 - estrutura das paginas
+- CSS3 - estilos 
+- média Queries - para estilo mobile
+- JavaScript - interação e manipulação 
+- AJAX - requisições sem atualizar página
+
+*Back End*
+- PHP - processamento
+- JSON - conversão de dados
+
 
 ---
 
