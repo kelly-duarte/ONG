@@ -36,6 +36,9 @@ https://projetointegradorunivesp.alwaysdata.net/index.php
 - PHP - processamento
 - JSON - conversão de dados
 
+*Banco de dados*
+- MySQL - armazenamento
+
 
 ---
 
