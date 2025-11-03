@@ -64,7 +64,7 @@
         voluntariado: "Voluntariado"
     };
 
-    // gerar campos padrões
+    // Função para gerar os campos padrões
     function gerarCamposPadroes() {
         return `
             <label>Nome Completo:</label><input type="text" name="nome_completo" required>
@@ -77,7 +77,7 @@
         `;
     }
 
-    // gerar campos escolaridade
+    // Função para gerar os campos de escolaridade
     function gerarCamposEscolaridade() {
         return `
             <label>Escolaridade:</label>
@@ -101,7 +101,12 @@
         const camposPadroes = gerarCamposPadroes();
 
         if (tipoSelecionado === "projeto_mulheres") {
-            info = `O Instituto Integração Jovem é uma organização sem fins lucrativos...`;
+            info = `O Instituto Integração Jovem é uma organização sem fins lucrativos, que tem a missão de trabalhar também o acolhimento de mulheres,
+em especial que estejam em tratamento quimioterápico ou alopécia, visando elevar a autoestima, qualidade de vida, saúde e bem estar.
+No mês de Maio iniciamos através do PROJETO MULHERES DO AMOR - Transforme sua dor em amor, as oficinas terapêuticas, onde são realizadas as                               
+confecções de Próteses externas para mulheres mastectomizadas, e as arrecadações de mechas para a realização da confecção das perucas.
+Com a visão de ampliar o atendimento humanizado para as pacientes oncológicas.
+Parte da nossa produção será destinada para duas grandes parceiras: Fernanda Chalin, idealizadora do Projeto Mamas do Amor e  Débora Vivaldi , idealizadora do IAM - Instituto Amor em Mechas.`;
             dynFields.innerHTML = camposPadroes + `
                 <h4>Informações adicionais para o Projeto Mulheres do Amor</h4>
                 <p><strong>Você já teve ou foi diagnosticada(o) com câncer?</strong></p>
@@ -146,7 +151,23 @@
             `;
 
         } else if (tipoSelecionado === "curso_profissional") {
-            info = `Este é um formulário de pré-inscrição...`;
+            info = `Prezados(as),Este é um formulário de pré-inscrição, para captação de alunos(as), onde a pessoa interessada deverá preencher as informações devidamente corretas, em especial os campos de telefone e e-mail.  
+O Projeto de Qualificação Profissional está sendo realizado pela Fundação Paulistana de Educação, Tecnologia e Cultura, vinculada a Secretaria de Governo Municipal da Prefeitura de São Paulo. No qual, o  Instituto Integração Jovem, esta atuando na modalidade de "PARCERIAS."
+CURSO TOTALMENTE GRATUITO.
+Segue opções de Cursos:
+- Cuidador de Idoso - Horário: Tarde das 13h as 17h 
+-  Adm/Logística - Horário: Noite das 18h as 22h 
+- Manicure e Pedicure - Horário: Tarde das 13h as 17h 
+- Informática Manutenção e Montagem de Computadores - Horário: Noite das 18h as 22h 
+
+(LOCAL: RUA ERVA SÃO CRISTOVÃO, 126, VISTA LINDA/SP)
+
+Todos os cursos têm duração de 30 dias, sendo 4 horas de aula, 5x por semana.(Segunda a Sexta)
+Sistema HIBIDRO ( 20 dias PRESENCIAL e 10 dias ON-LINE
+
+Será oferecido para o(a) aluno(a) 1 kit lanche e o Material didático.
+
+Após a conclusão do Curso, o(a) aluno(a) será direcionado automaticamente para fazer entrevista através das empresas parceiras deste projeto.`;
             dynFields.innerHTML = camposPadroes + `
                 <h4>Informações adicionais para Cursos de Capacitação Profissional</h4>
                 ${gerarCamposEscolaridade()}
@@ -239,7 +260,7 @@
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                alert("Dados salvos com sucesso!");
+                alert("Dados salvos com sucesso!\nConfirmação enviada para o email cadastrado!");
                 cadastroForm.reset(); // Limpa o formulário
                 dynFields.innerHTML = ""; // Limpa os campos dinâmicos
                 descBox.innerHTML = '<h3>Descrição do formulário</h3><p>Escolha uma categoria para ver os detalhes do cadastro aqui.</p>'; // Reseta a descrição

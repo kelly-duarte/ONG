@@ -6,10 +6,10 @@
     <title>Quem Somos - Instituto Integração Jovem</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* página Quem Somos */
+        /* Estilos adicionais para a página Quem Somos */
      main {
-     max-width: 1200px;  
-     margin: 0 auto;     
+     max-width: 1200px;  /* largura máxima */
+     margin: 0 auto;     /* centraliza horizontalmente */
      padding: 20px;
       }
 

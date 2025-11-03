@@ -1,4 +1,5 @@
 <?php
+// Verifica se estamos na página inicial
 $is_index_page = basename($_SERVER['PHP_SELF']) === 'index.php';
 ?>
 

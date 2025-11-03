@@ -17,7 +17,7 @@
       </a>
     </li>
     <li>
-      <a href="index.php#futebol">
+      <a href="futebol.php">
         <img src="https://uploads.onecompiler.io/43fvz8gg6/43vemwgzp/depositphotos_653193000-stock-illustration-football-ball-color-vector-illustration-removebg-preview.png" 
              alt="Ícone Futebol">
         Futebol
@@ -31,7 +31,7 @@
       </a>
     </li>
     <li>
-      <a href="index.php#acoes-sociais">
+      <a href="acoes-sociais.php">
         <img src="https://uploads.onecompiler.io/43fvz8gg6/43vemwgzp/4438113-seguro-de-vida-azul-plano-design-longa-sombra-glifo-icone-investimento-na-saude-protecao-seguro-vida-social-cobertura-salvaguarda-imunidade-pagando-pela-seguranca-ilustracao-silhueta-vetor-rem.png" 
              alt="Ícone Ações Sociais">
         Ações Sociais

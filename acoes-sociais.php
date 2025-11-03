@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cursos - Instituto Integração Jovem</title>
+    <title>Ações Sociais - Instituto Integração Jovem</title>
     <link rel="stylesheet" href="style.css">
     <style>
-      main {
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 10px;
-       }       
-       .carousel {
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px;
+        }       
+        .carousel {
             width: 100%;
-            max-width: 700px;
-            margin: 30px auto;
+            max-width: 600px;
+            margin: 10px auto;
             overflow: hidden;
             position: relative;
             border: 5px solid #004aad;
@@ -29,7 +29,7 @@
         h2 {
             color: #004aad;
             text-align: center;
-            margin-top: 10px;
+            margin-top: 0px;
         }
         p {
             max-width: 900px;
@@ -104,8 +104,8 @@
 <?php
 include 'conexao.php';
 
-// Buscar apenas links da seção "cursos" para o carousel
-$sql_carousel = "SELECT url FROM links WHERE secao = 'cursos' ORDER BY id DESC";
+// Buscar apenas links da seção "acoes_sociais" para o carousel
+$sql_carousel = "SELECT url FROM links WHERE secao = 'acoes_sociais' ORDER BY id DESC";
 $result_carousel = $conn->query($sql_carousel);
 
 $imageUrls = [];
@@ -151,16 +151,14 @@ $conn->close();
 ?>
 
 <main>
-    <h2>Nossos Cursos</h2>
+    <h2>Ações Sociais</h2>
     <p>
-        O Instituto Integração Jovem oferece diversos cursos voltados para capacitação profissional,
-        desenvolvimento humano e inclusão social. Nossos cursos buscam proporcionar novas oportunidades
-        para crianças, jovens e adultos em situação de vulnerabilidade, fortalecendo a cidadania e o
-        protagonismo social.
+        A importância do Instituto Integração Jovem no trabalho SOCIAL, junto à comunidade que já atua há mais de 5 anos, atendendo mais de 500 famílias diretamente e indiretamente e já atendeu muito mais, com muita luta e dedicação, levando cestas básicas, hortifrútis e o programa Viva Leite mensalmente, entre outros. O trabalho não para! Força, foco e fé!! 🙏🙏🙏🏽🙌🏽.
+        Você pode ser beneficiado através de nossas ações ou ser um apoiador do nosso trabalho.
     </p>
 
     <div class="carousel">
-        <img id="carousel-image" src="<?= !empty($imageUrls) ? htmlspecialchars($imageUrls[0]) : '#' ?>" alt="Carrossel Cursos">
+        <img id="carousel-image" src="<?= !empty($imageUrls) ? htmlspecialchars($imageUrls[0]) : '#' ?>" alt="Carrossel Ações Sociais">
         <button class="carousel-btn prev" onclick="prevImage()">&#10094;</button>
         <button class="carousel-btn next" onclick="nextImage()">&#10095;</button>
         <button id="pause-play-btn" class="pause-play" onclick="togglePlayPause()">Pausar</button>
